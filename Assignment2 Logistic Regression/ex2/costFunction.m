@@ -22,7 +22,7 @@ grad = zeros(size(theta));
 sigma_1 = 0;
 sigma_2 = 0;
 for k = 1:m
-    h=sigmoid(theta'*X(k,:)'); % probably wrong here, cus zero works but others doesn't
+    h=sigmoid(theta'*X(k,:)');
     sigma_1 = sigma_1 + -y(k)*log(h)-(1-y(k))*log(1-h);
     sigma_2 = sigma_2 + (h-y(k)).*X(k,:);
 end
